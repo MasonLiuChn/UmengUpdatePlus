@@ -28,7 +28,7 @@ allprojects {
 	}
 	
 	dependencies {
-	        compile 'com.github.MasonLiuChn:UmengUpdatePlus:1.0.0'
+	        compile 'com.github.MasonLiuChn:UmengUpdatePlus:1.0.1'
 	}
 ```
 

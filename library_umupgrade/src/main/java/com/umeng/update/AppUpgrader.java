@@ -27,6 +27,7 @@ public class AppUpgrader {
     private static final int UPGRADETYPE_ALL_FORCE = 3;
 
     public static void start(Application context, String umengKey, @Nullable String upgradeTypeStr, @Nullable String rule) {
+        UmengUpdateAgent.setUpdateCheckConfig(false);
         UpdateConfig.setAppkey(umengKey);
         UmengUpdateAgent.setUpdateOnlyWifi(false);
         SharedPre.getInstance(context).set(KEY_FORCE_UPGRADE, false);
@@ -81,6 +82,7 @@ public class AppUpgrader {
 
     public static void check(Context context, String umengKey) {
         SharedPre.getInstance(context).set(KEY_FORCE_UPGRADE, false);
+        UmengUpdateAgent.setUpdateCheckConfig(false);
         UmengUpdateAgent.setUpdateOnlyWifi(false);
         UmengUpdateAgent.update(context);
     }
