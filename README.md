@@ -3,7 +3,7 @@
 友盟更新组件的扩展，不借助外部接口实现了强制更新和简单的版本灰度。
 
 
-#1、支持四种更新模式
+#1、四种更新模式
 0.关闭模式：不更新
 
 1.自由模式：wifi 下静默更新,弹窗可取消  +   非 wifi 弹窗 可取消
@@ -12,7 +12,7 @@
 
 3.强制模式：wifi 下静默更新,弹窗不可取消 +   非 wifi 弹窗 不可取消
 
-#2、给不同版本定制更新规则
+#2、特殊版本定制更新规则
 实现简单版本灰度:即指定某个 versionCode 采用指定的 upgradeType
 
 rule 的格式为versionCode:upgradeType#versionCode:upgradeType#versionCode:upgradeType
@@ -20,15 +20,8 @@ rule 的格式为versionCode:upgradeType#versionCode:upgradeType#versionCode:upg
 例如：1:1#2:3
 
 #Usage: 
-```java
-AppUpgrader.start(getApplication(), "56f237ece0f55a8f7b000a14");
-```
-##更新模式和更新规则的配置：
 
-如下图将更新模式和更新规则写在更新日志下方，放心，它不会显示在界面上。Json中的updateType和updateRule都是String类型。
-
-<img src="https://github.com/MasonLiuChn/UmengUpdatePlus/raw/master/app/doc/1.png"/>
-
+##1、代码
 ```goovy
 allprojects {
 		repositories {
@@ -41,6 +34,16 @@ allprojects {
 	        compile 'com.github.MasonLiuChn:UmengUpdatePlus:1.0.2'
 	}
 ```
+```java
+AppUpgrader.start(getApplication(), UMENG_KEY);
+```
+##2、更新模式和更新规则的配置：
+
+如下图将更新模式和更新规则写在更新日志下方，放心，它不会显示在界面上。Json中的updateType和updateRule都是String类型。
+
+<img src="https://github.com/MasonLiuChn/UmengUpdatePlus/raw/master/app/doc/1.png"/>
+
+
 
 #Contact me:
 
