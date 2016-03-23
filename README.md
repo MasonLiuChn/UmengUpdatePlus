@@ -24,7 +24,7 @@ AppUpgrader.start(getApplication(), "56f237ece0f55a8f7b000a14");
 
 如下图将更新模式和更新规则写在更新日志下方，放心，它不会显示在界面上。Json中的updateType和updateRule都是String类型。
 
-<img src="https://github.com/MasonLiuChn/UmengUpdatePlus/raw/master/app/doc/1.png"  width="320"/>
+<img src="https://github.com/MasonLiuChn/UmengUpdatePlus/raw/master/app/doc/1.png"/>
 
 ```goovy
 allprojects {
