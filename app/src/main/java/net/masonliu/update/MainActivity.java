@@ -11,6 +11,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AppUpgrader.start(getApplication(), "", "2", null);
+        AppUpgrader.start(getApplication(), "56f237ece0f55a8f7b000a14");
     }
 }

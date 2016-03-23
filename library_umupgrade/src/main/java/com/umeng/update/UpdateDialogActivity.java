@@ -77,7 +77,7 @@ public class UpdateDialogActivity
             String str2 = this.b.a(this, downloaded);
             TextView localTextView = (TextView) findViewById(contentResId);
             localTextView.requestFocus();
-            localTextView.setText(str2);
+            UpdateUtil.setLogTextViewFromNewLog(localTextView,str2);
             //以下是自定义的代码
             if (SharedPre.getInstance(this).getBoolean(AppUpgrader.KEY_FORCE_UPGRADE)) {
                 this.findViewById(cancelBtnResId).setVisibility(View.GONE);

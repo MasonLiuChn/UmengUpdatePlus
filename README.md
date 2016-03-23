@@ -1,6 +1,6 @@
 # UmengUpdatePlus
 
-友盟更新组件的扩展，搭配友盟在线参数实现了强制更新和简单的版本灰度。
+友盟更新组件的扩展，不借助外部接口实现了强制更新和简单的版本灰度。
 
 
 #1、支持四种更新模式
@@ -14,11 +14,18 @@
 
 rule 的格式为versionCode:upgradeType#versionCode:upgradeType#versionCode:upgradeType
 
+例如：1:1#2:3
+
 #Usage: 
 ```java
-public static void start(Application context, String umengKey, @Nullable String upgradeTypeStr, @Nullable String rule)
+AppUpgrader.start(getApplication(), "56f237ece0f55a8f7b000a14");
 ```
-注：更新模式和更新规则可以通过友盟在线参数配置。
+##更新模式和更新规则的配置：
+
+如下图将更新模式和更新规则写在更新日志下方，放心，它不会显示在界面上。Json中的updateType和updateRule都是String类型。
+
+<img src="https://github.com/MasonLiuChn/UmengUpdatePlus/raw/master/app/doc/1.png"  width="320"/>
+
 ```goovy
 allprojects {
 		repositories {
@@ -28,7 +35,7 @@ allprojects {
 	}
 	
 	dependencies {
-	        compile 'com.github.MasonLiuChn:UmengUpdatePlus:1.0.1'
+	        compile 'com.github.MasonLiuChn:UmengUpdatePlus:1.0.2'
 	}
 ```
 
