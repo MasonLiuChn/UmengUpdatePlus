@@ -16,11 +16,11 @@ public class UpdateInfo {
      * "updateRule":"1:2#2:1"
      * }
      *
-     * @param log
+     * @param updateResponse
      */
-    public static UpdateInfo parseUpdateInfoFromUmengLog(String log) {
+    public static UpdateInfo parseUpdateInfoFromUmengLog(UpdateResponse updateResponse) {
         try {
-            String json = UpdateUtil.getPatternStr(log, UpdateUtil.JSON_PATTERN, 3, 2).replaceAll("\\s", "");
+            String json = UpdateUtil.getPatternStr(updateResponse.updateLog, UpdateUtil.JSON_PATTERN, 3, 2).replaceAll("\\s", "");
             JSONObject jsonObject = new JSONObject(json);
             String type = jsonObject.getString("updateType");
             String rule = jsonObject.getString("updateRule");

@@ -107,7 +107,7 @@ public class AppUpgrader {
         @Override
         protected UpdateInfo doInBackground(Void... params) {
             UpdateResponse var1 = (new com.umeng.update.b(context)).b();
-            return UpdateInfo.parseUpdateInfoFromUmengLog(var1.updateLog);
+            return UpdateInfo.parseUpdateInfoFromUmengLog(var1);
         }
 
         @Override
