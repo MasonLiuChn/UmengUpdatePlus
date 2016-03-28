@@ -1,5 +1,7 @@
 package com.umeng.update;
 
+import android.text.TextUtils;
+
 import org.json.JSONObject;
 
 /**
@@ -30,6 +32,13 @@ public class UpdateInfo {
             return info;
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        //如果 updatelog 里没有 json，则使用友盟默认的升级策略
+        if (updateResponse != null && !TextUtils.isEmpty(updateResponse.updateLog)) {
+            UpdateInfo info = new UpdateInfo();
+            info.setUpdateType("1");
+            info.setUpdateRule("");
+            return info;
         }
         return null;
     }
