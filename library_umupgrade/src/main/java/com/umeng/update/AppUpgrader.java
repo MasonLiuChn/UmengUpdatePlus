@@ -30,6 +30,7 @@ public class AppUpgrader {
         UmengUpdateAgent.setUpdateCheckConfig(false);
         UpdateConfig.setAppkey(umengKey);
         UmengUpdateAgent.setUpdateOnlyWifi(false);
+        UmengUpdateAgent.setDeltaUpdate(false);
         SharedPre.getInstance(context).set(KEY_FORCE_UPGRADE, false);
     }
 
