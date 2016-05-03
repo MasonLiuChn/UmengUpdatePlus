@@ -1,3 +1,7 @@
+## PLEASE NOTE, THIS PROJECT IS NO LONGER BEING MAINTAINED,PLEASE GO TO NEW REPOSITORY  https://github.com/MasonLiuChn/BuglyPlus
+
+## 该项目不再维护了，因为友盟关闭的自动更新服务，对友盟非常失望，但是找到其他的替代方案，请移步https://github.com/MasonLiuChn/BuglyPlus
+
 # UmengUpdatePlus
 
 友盟更新组件的扩展，不借助外部接口实现了强制更新和简单的版本灰度。
